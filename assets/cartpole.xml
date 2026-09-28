@@ -10,12 +10,11 @@
           type="slide"
           axis="1 0 0"
           range="-1.25 1.25"
-          damping="1">
+          damping="1"/>
       <geom name="cart-geom"
             type="box"
             size="0.15 0.1 0.08"
             mass="10"/>
-      </body>
 
     <body name="pole"
           pos="0 0 0.08">
@@ -30,6 +29,8 @@
           fromto="0 0 0 0 0 0.75"
           mass="5"/>
       </body>
+
+    </body>
             
   </worldbody>
   <actuator>
