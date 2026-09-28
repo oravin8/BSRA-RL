@@ -12,11 +12,11 @@
       <geom contype="0"
           conaffinity="0"/> 
 
+    </default>
+
   <!-- MEMBER TODO 2.4: Include cartpole.xml here. -->
 
         <include file="cartpole.xml"/>
-
-    </default>
 
   <worldbody>
     <!-- MEMBER TODO 2.5: Add a floor, rail, light, and camera named side.
