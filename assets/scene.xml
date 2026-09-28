@@ -2,7 +2,7 @@
   <!-- MEMBER TODO 2.3: Set compiler angle units and simulation options.
        Disable geom collisions with a default shared by model and scenery. -->
   
-  <compiler angle="degrees"/>
+  <compiler angle="degree"/>
 
     <option timestep="0.02"
             gravity="0 0 -9.81"
