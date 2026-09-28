@@ -23,7 +23,7 @@
          Choose a view showing the full rail and upright pole. -->
     <geom name="floor-geom"
           type="plane"
-          size="3 3 0.1"/>
+          size="3 3 0.2"/>
 
     <geom name="rail-geom"
           type="box"
