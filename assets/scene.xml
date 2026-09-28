@@ -22,7 +22,8 @@
     <!-- MEMBER TODO 2.5: Add a floor, rail, light, and camera named side.
          Choose a view showing the full rail and upright pole. -->
     <geom name="floor-geom"
-          type="plane"/>
+          type="plane"
+          size="3 3 1"/>
 
     <geom name="rail-geom"
           type="box"
