@@ -13,7 +13,7 @@
           damping="1">
       <geom name="cart-geom"
             type="box"
-            size="0.3 0.2 0.16"
+            size="0.15 0.1 0.08"
             mass="10"/>
       </body>
 
