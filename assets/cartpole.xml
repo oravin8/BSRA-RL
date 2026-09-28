@@ -11,7 +11,7 @@
           axis="1 0 0"
           range="-1.25 1.25"
           damping="1"/>
-      <geom name="cart-geom"
+      <geom name="cart_geom"
             type="box"
             size="0.15 0.1 0.08"
             mass="10"/>
@@ -23,7 +23,7 @@
           axis="0 1 0"
           range="-90 90"
           damping="1" />
-      <geom name="pole-geom"
+      <geom name="pole_geom"
           type="capsule"
           size="0.04"
           fromto="0 0 0 0 0 0.75"
