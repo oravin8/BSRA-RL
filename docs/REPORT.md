@@ -14,13 +14,14 @@ To display an image, add `!`: `![Model screenshot](../results/model.png)`.
 
 ## Setup
 
-- Member: **TODO**
-- OS: **TODO**
-- Setup diagnostic, viewer, and RGB results; any fix needed: **TODO**
-- Fork URL and working branch: **TODO**
+- Member: **Oliver Ravin**
+- OS: **MacOS**
+- Setup diagnostic, viewer, and RGB results; any fix needed: **Small struggle getting MuJoCo to work with mjpython but working now**
+- Fork URL and working branch: **https://github.com/oravin8/BSRA-RL**
 - Before starting, read the [toolchain overview](../resources/toolchain.md).
   What role does each of MuJoCo, Gymnasium, Stable-Baselines3, and TensorBoard
-  play in this exercise? Describe how they work together in your own words: **TODO**
+  play in this exercise? Describe how they work together in your own words: 
+  **MuJoCo is the place where the reinforcement learning can apply to a physical being through its joints and sensors. However behind it, gymnasium is used for as the backbone for creating reinforcement learning environments while Stable-Baslines3 saves the implementation used. TensorBoard also shows the progress of the reinforcement learning over time.**
 
 ## Model and task
 
