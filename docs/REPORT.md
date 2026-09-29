@@ -29,10 +29,10 @@ To display an image, add `!`: `![Model screenshot](../results/model.png)`.
 
 - Which tool loads `scene.xml` and its included `cartpole.xml`, and what does it
   create from them? Point to the loading call in `scripts/view_model.py`. Which
-  tool computes the motion you see in the viewer when a control is applied? **TODO**
+  tool computes the motion you see in the viewer when a control is applied? **The model was loaded in line 18 from scripts/view_model.py. MuJoCo then computes the motion through its simulation model when the model was loaded.**
 - Which XML file owns the mechanism, and how does the include connect it to the
   scene? Explain the slide/hinge axes, unactuated pole, box half-extents, and
-  degrees versus radians. Link a small model screenshot (`../results/model.png`): **TODO**
+  degrees versus radians. Link a small model screenshot (`../results/model.png`): **The xml file is cartpole as that file contains the creation of the pole and the cart which is then connected through linking the file with the scene to get the full picture. In cartpole, the cart was created with a slider joint in the x-axis, then a pole with a y-axis hinge joint but does not contain an actuator since it does not have an applied force pushed on it. Both also have their own sizes in the shape of boxes. The XML specifically asked for degrees compared to radians which is why it contained -90 to 90 instead of -pi/2 to pi/2.**
 
 ### Environment (Stage 3)
 
