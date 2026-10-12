@@ -1,0 +1,59 @@
+{
+  "run_name": "smoke",
+  "seed": 0,
+  "smoke": true,
+  "requested_steps": 256,
+  "actual_steps": 256,
+  "elapsed_seconds": 0.7268822500482202,
+  "device": "cpu",
+  "torch_threads": 1,
+  "policy": "MlpPolicy",
+  "ppo": {
+    "learning_rate": 0.0003,
+    "n_steps": 128,
+    "batch_size": 64,
+    "n_epochs": 2,
+    "gamma": 0.99,
+    "gae_lambda": 0.95,
+    "clip_range": 0.2,
+    "clip_range_vf": null,
+    "normalize_advantage": true,
+    "ent_coef": 0.0,
+    "vf_coef": 0.5,
+    "max_grad_norm": 0.5,
+    "use_sde": false,
+    "sde_sample_freq": -1,
+    "target_kl": null,
+    "stats_window_size": 100
+  },
+  "task": {
+    "environment": "InvertedPendulum-v5",
+    "frame_skip": 2,
+    "max_episode_steps": 1000,
+    "reset_noise_scale": 0.01,
+    "files_sha256": {
+      "assets/cartpole.xml": "760a0beddf9c2ad0e1b20b86db8b8601631ddac8b68524ffea4a71490752449d",
+      "assets/scene.xml": "1f3c1c973c564f4984aae3bc164486f02d57b488efc3090d4d8d2fdc7b7a10b4",
+      "onboarding/env.py": "10a6820c3075531763cd6a1ca6c8d69917b96d5567709f92ed8e7b50a02c3e16"
+    }
+  },
+  "versions": {
+    "python": "3.12.3",
+    "gymnasium": "1.2.3",
+    "mujoco": "3.6.0",
+    "stable-baselines3": "2.7.1",
+    "torch": "2.10.0",
+    "numpy": "2.4.2",
+    "tensorboard": "2.21.0",
+    "imageio-ffmpeg": "0.6.0"
+  },
+  "lockfile_sha256": "7c2bf83696043dc549dbef636f68ccfde0bcf082e1a7708b85e9e8b1deb65508",
+  "source_revision": "34c7d9e6b95aa4d5583ed442637c88b91d0d2e45",
+  "source_dirty": true,
+  "training_code_sha256": "eb6438cbf90f8d12b3d90b892a50131b1bf7957f01fc126b2f741695524c42b6",
+  "policy_sha256": "3f7f2fcfb6d9a14de1d2277028784b9a7e0d44a6755b07554655e68678ef13ad",
+  "outputs": {
+    "policy": "models/smoke/policy.zip",
+    "tensorboard": "runs/smoke"
+  }
+}
