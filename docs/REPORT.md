@@ -54,15 +54,15 @@ setting that supports your answer, and distinguish MuJoCo's role from Gymnasium'
 
 ## Training
 
-- Run name / source commit / training seed: **TODO**
-- Requested and actual steps / elapsed time / device: **TODO**
-- Configuration and versions: **TODO** link `../results/<run>/run.json`
-- Learning curve: **TODO** embed `../results/<run>/learning-curve.png`
+- Run name / source commit / training seed: **smoke / 34c7d9e6b95aa4d5583ed442637c88b91d0d2e45 / 0**
+- Requested and actual steps / elapsed time / device: **256 and 256/ 0.727 seconds/cpu device**
+- Configuration and versions: **run.json** link `../results/<run>/run.json`
+- Learning curve: **have screenshot if necessary as struggled to embed** embed `../results/<run>/learning-curve.png`
 
 - What do SB3, PyTorch, and `Monitor` each do here? How does SB3 use the environment
-  and settings you pass to PPO? **TODO**
+  and settings you pass to PPO? **SB3 and PyTorch create the physics environment for the agent to work on while monitor tracks each episode so it can be converted into viewable graphs on TensorBoard. The PPO allows SB3 to use the given environment for the agent to work in.**
 - What do the curve's axes, averaging, and smoothing mean, and what evidence of
-  improvement, variability, or a plateau do you see? **TODO**
+  improvement, variability, or a plateau do you see? **The horizontal axis is the training steps while the vertical axis is the average rewards given on that step. The smooting allows the graphs to look more visually appealing and better understand the trend over the course of the training steps. As the training steps increased, the reward mean value increased as first had a small exponential increase before increasing relatively linearly.**
 
 ## Evaluation
 
