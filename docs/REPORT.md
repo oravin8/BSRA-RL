@@ -98,6 +98,6 @@ release are required for these files.
 ## Feedback
 
 - Did you learn anything from this onboarding? What was new, or what became
-  clearer? If little was new, say so: **TODO**
+  clearer? If little was new, say so: **Before the onboarding, I did not know anything really about RL or MuJoCo or anything of that kind so this was a good introduction. Even after the onboarding its all pretty new to me still but now I have a rough idea of how it works.**
 - What improvements would make the onboarding easier to follow or more useful?
-  Mention any confusing instructions, missing background, or unnecessary work: **TODO**
+  Mention any confusing instructions, missing background, or unnecessary work: **I think it would have helped more if I got clearer instructions with how to do some of the stuff because I did not know much and had to sometimes rely on a LLM to guide me with what to do. Also as someone with a MacOS, I was aware that some of the stuff needed things to be different and I think it was on setup it required an extra hour to try to get it working through the MacOS.**
