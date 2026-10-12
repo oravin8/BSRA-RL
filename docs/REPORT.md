@@ -54,15 +54,15 @@ setting that supports your answer, and distinguish MuJoCo's role from Gymnasium'
 
 ## Training
 
-- Run name / source commit / training seed: **smoke / 34c7d9e6b95aa4d5583ed442637c88b91d0d2e45/ 0**
-- Requested and actual steps / elapsed time / device: **256 and 256 / 0.72689 seconds / CPU**
-- Configuration and versions: **[run.json](results/smoke/run.json)**
-- Learning curve: **took screenshot as struggled to find a way to embed** embed `../results/<run>/learning-curve.png`
+- Run name / source commit / training seed: **TODO**
+- Requested and actual steps / elapsed time / device: **TODO**
+- Configuration and versions: **TODO** link `../results/<run>/run.json`
+- Learning curve: **TODO** embed `../results/<run>/learning-curve.png`
 
 - What do SB3, PyTorch, and `Monitor` each do here? How does SB3 use the environment
-  and settings you pass to PPO? **SB3 and Pytorch is the created environment that the Monitor could then track individual performances which could then eventually create the graphs on Tensorboard. The PPO creates the agent using SB3 and SB3 helps it perform.**
+  and settings you pass to PPO? **TODO**
 - What do the curve's axes, averaging, and smoothing mean, and what evidence of
-  improvement, variability, or a plateau do you see? **The horizontal axis is the training step and the vertical axis is the average value of rewards the agent received. The smoothing lets the graph look more visually appealing and showing the general trends of the agents actions. As the training increased the reward mean also increased as it first had a small exponential jump before increaing linearly till the end of the training time step.**
+  improvement, variability, or a plateau do you see? **TODO**
 
 ## Evaluation
 
@@ -71,16 +71,16 @@ Use reset seeds 10000–10019, deterministic PPO actions, and random action seed
 
 | Agent | Episodes | Return mean ± std | Length mean ± std | Time-limit fraction |
 | --- | --- | --- | --- | --- |
-| Random | TODO | TODO | TODO | TODO |
-| PPO | TODO | TODO | TODO | TODO |
+| Random | 20 | 4.8+-2.66 | 5.8+-2.66 | 0.0 |
+| PPO | 20 | 1000+-0 | 1000+-0 | 1.0 |
 
 - Per-episode CSV and summary JSON: **TODO** links
-- Predetermined PPO rollout (seed 10000): **TODO** briefly describe the behavior you observed
-- Limitation or failure, and a specific diagnosis if learning was weak: **TODO**
-
+- Predetermined PPO rollout (seed 10000): **I noticed that compared to the baseline random model, it performed significantly better as it reached more time steps.** briefly describe the behavior you observed
+- Limitation or failure, and a specific diagnosis if learning was weak: **Not much failure as all 20 episdoes reached the required time showing that learning was successful.**
+  
 - Why does this evaluation differ from a training curve, and what can one
   trained seed not establish? What carries over to humanoid soccer, and what is
-  missing (for example, contacts, partial observations, or sim-to-real transfer)? **TODO**
+  missing (for example, contacts, partial observations, or sim-to-real transfer)? **The evaluation is different as the training curve shows how the agent was learning over time while this showed how successful the training was over 20 different seeds. This does not establish that it will work on every seed but rather only the ones it was trained on. The thing that carries over the humanoid soccer is the learning and training aspect, however it is significantly more complex and requires balance and decision making in a team gameenvironment.**
 
 ## Review
 
