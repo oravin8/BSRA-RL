@@ -54,15 +54,15 @@ setting that supports your answer, and distinguish MuJoCo's role from Gymnasium'
 
 ## Training
 
-- Run name / source commit / training seed: **TODO**
-- Requested and actual steps / elapsed time / device: **TODO**
-- Configuration and versions: **TODO** link `../results/<run>/run.json`
-- Learning curve: **TODO** embed `../results/<run>/learning-curve.png`
+- Run name / source commit / training seed: **smoke / 34c7d9e6b95aa4d5583ed442637c88b91d0d2e45 / 0**
+- Requested and actual steps / elapsed time / device: **256 and 256/ 0.727 seconds/cpu device**
+- Configuration and versions: **run.json** link `../results/<run>/run.json`
+- Learning curve: **have screenshot if necessary as struggled to embed** embed `../results/<run>/learning-curve.png`
 
 - What do SB3, PyTorch, and `Monitor` each do here? How does SB3 use the environment
-  and settings you pass to PPO? **TODO**
+  and settings you pass to PPO? **SB3 and PyTorch create the physics environment for the agent to work on while monitor tracks each episode so it can be converted into viewable graphs on TensorBoard. The PPO allows SB3 to use the given environment for the agent to work in.**
 - What do the curve's axes, averaging, and smoothing mean, and what evidence of
-  improvement, variability, or a plateau do you see? **TODO**
+  improvement, variability, or a plateau do you see? **The horizontal axis is the training steps while the vertical axis is the average rewards given on that step. The smooting allows the graphs to look more visually appealing and better understand the trend over the course of the training steps. As the training steps increased, the reward mean value increased as first had a small exponential increase before increasing relatively linearly.**
 
 ## Evaluation
 
@@ -71,16 +71,16 @@ Use reset seeds 10000–10019, deterministic PPO actions, and random action seed
 
 | Agent | Episodes | Return mean ± std | Length mean ± std | Time-limit fraction |
 | --- | --- | --- | --- | --- |
-| Random | TODO | TODO | TODO | TODO |
-| PPO | TODO | TODO | TODO | TODO |
+| Random | 20 | 4.8+-2.66 | 5.8+-2.66 | 0.0 |
+| PPO | 20 | 1000+-0 | 1000+-0 | 1.0 |
 
 - Per-episode CSV and summary JSON: **TODO** links
-- Predetermined PPO rollout (seed 10000): **TODO** briefly describe the behavior you observed
-- Limitation or failure, and a specific diagnosis if learning was weak: **TODO**
-
+- Predetermined PPO rollout (seed 10000): **I noticed that compared to the baseline random model, it performed significantly better as it reached more time steps.** briefly describe the behavior you observed
+- Limitation or failure, and a specific diagnosis if learning was weak: **Not much failure as all 20 episdoes reached the required time showing that learning was successful.**
+  
 - Why does this evaluation differ from a training curve, and what can one
   trained seed not establish? What carries over to humanoid soccer, and what is
-  missing (for example, contacts, partial observations, or sim-to-real transfer)? **TODO**
+  missing (for example, contacts, partial observations, or sim-to-real transfer)? **The evaluation is different as the training curve shows how the agent was learning over time while this showed how successful the training was over 20 different seeds. This does not establish that it will work on every seed but rather only the ones it was trained on. The thing that carries over the humanoid soccer is the learning and training aspect, however it is significantly more complex and requires balance and decision making in a team gameenvironment.**
 
 ## Review
 
@@ -98,6 +98,6 @@ release are required for these files.
 ## Feedback
 
 - Did you learn anything from this onboarding? What was new, or what became
-  clearer? If little was new, say so: **TODO**
+  clearer? If little was new, say so: **Before the onboarding, I did not know anything really about RL or MuJoCo or anything of that kind so this was a good introduction. Even after the onboarding its all pretty new to me still but now I have a rough idea of how it works.**
 - What improvements would make the onboarding easier to follow or more useful?
-  Mention any confusing instructions, missing background, or unnecessary work: **TODO**
+  Mention any confusing instructions, missing background, or unnecessary work: **I think it would have helped more if I got clearer instructions with how to do some of the stuff because I did not know much and had to sometimes rely on a LLM to guide me with what to do. Also as someone with a MacOS, I was aware that some of the stuff needed things to be different and I think it was on setup it required an extra hour to try to get it working through the MacOS.**
